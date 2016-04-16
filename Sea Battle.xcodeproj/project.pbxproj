@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD878CC01CC26B8700AF3C99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CBF1CC26B8700AF3C99 /* main.m */; };
+		FD878CC31CC26B8700AF3C99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CC21CC26B8700AF3C99 /* AppDelegate.m */; };
+		FD878CC61CC26B8700AF3C99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CC51CC26B8700AF3C99 /* ViewController.m */; };
+		FD878CC91CC26B8700AF3C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD878CC71CC26B8700AF3C99 /* Main.storyboard */; };
+		FD878CCB1CC26B8700AF3C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD878CCA1CC26B8700AF3C99 /* Assets.xcassets */; };
+		FD878CCE1CC26B8700AF3C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD878CCC1CC26B8700AF3C99 /* LaunchScreen.storyboard */; };
+		FD878CD91CC26B8800AF3C99 /* Sea_BattleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CD81CC26B8800AF3C99 /* Sea_BattleTests.m */; };
+		FD878CE41CC26B8900AF3C99 /* Sea_BattleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CE31CC26B8900AF3C99 /* Sea_BattleUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD878CD51CC26B8800AF3C99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD878CB31CC26B8500AF3C99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD878CBA1CC26B8500AF3C99;
+			remoteInfo = "Sea Battle";
+		};
+		FD878CE01CC26B8900AF3C99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD878CB31CC26B8500AF3C99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD878CBA1CC26B8500AF3C99;
+			remoteInfo = "Sea Battle";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD878CBB1CC26B8500AF3C99 /* Sea Battle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sea Battle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD878CBF1CC26B8700AF3C99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD878CC11CC26B8700AF3C99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FD878CC21CC26B8700AF3C99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FD878CC41CC26B8700AF3C99 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FD878CC51CC26B8700AF3C99 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FD878CC81CC26B8700AF3C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD878CCA1CC26B8700AF3C99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD878CCD1CC26B8700AF3C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD878CCF1CC26B8700AF3C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD878CD41CC26B8800AF3C99 /* Sea BattleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sea BattleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD878CD81CC26B8800AF3C99 /* Sea_BattleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sea_BattleTests.m; sourceTree = "<group>"; };
+		FD878CDA1CC26B8800AF3C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD878CDF1CC26B8900AF3C99 /* Sea BattleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sea BattleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD878CE31CC26B8900AF3C99 /* Sea_BattleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sea_BattleUITests.m; sourceTree = "<group>"; };
+		FD878CE51CC26B8A00AF3C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD878CB81CC26B8500AF3C99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD878CD11CC26B8800AF3C99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD878CDC1CC26B8800AF3C99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD878CB21CC26B8400AF3C99 = {
+			isa = PBXGroup;
+			children = (
+				FD878CBD1CC26B8700AF3C99 /* Sea Battle */,
+				FD878CD71CC26B8800AF3C99 /* Sea BattleTests */,
+				FD878CE21CC26B8900AF3C99 /* Sea BattleUITests */,
+				FD878CBC1CC26B8500AF3C99 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD878CBC1CC26B8500AF3C99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD878CBB1CC26B8500AF3C99 /* Sea Battle.app */,
+				FD878CD41CC26B8800AF3C99 /* Sea BattleTests.xctest */,
+				FD878CDF1CC26B8900AF3C99 /* Sea BattleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD878CBD1CC26B8700AF3C99 /* Sea Battle */ = {
+			isa = PBXGroup;
+			children = (
+				FD878CC11CC26B8700AF3C99 /* AppDelegate.h */,
+				FD878CC21CC26B8700AF3C99 /* AppDelegate.m */,
+				FD878CC41CC26B8700AF3C99 /* ViewController.h */,
+				FD878CC51CC26B8700AF3C99 /* ViewController.m */,
+				FD878CC71CC26B8700AF3C99 /* Main.storyboard */,
+				FD878CCA1CC26B8700AF3C99 /* Assets.xcassets */,
+				FD878CCC1CC26B8700AF3C99 /* LaunchScreen.storyboard */,
+				FD878CCF1CC26B8700AF3C99 /* Info.plist */,
+				FD878CBE1CC26B8700AF3C99 /* Supporting Files */,
+			);
+			path = "Sea Battle";
+			sourceTree = "<group>";
+		};
+		FD878CBE1CC26B8700AF3C99 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD878CBF1CC26B8700AF3C99 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD878CD71CC26B8800AF3C99 /* Sea BattleTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD878CD81CC26B8800AF3C99 /* Sea_BattleTests.m */,
+				FD878CDA1CC26B8800AF3C99 /* Info.plist */,
+			);
+			path = "Sea BattleTests";
+			sourceTree = "<group>";
+		};
+		FD878CE21CC26B8900AF3C99 /* Sea BattleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD878CE31CC26B8900AF3C99 /* Sea_BattleUITests.m */,
+				FD878CE51CC26B8A00AF3C99 /* Info.plist */,
+			);
+			path = "Sea BattleUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD878CBA1CC26B8500AF3C99 /* Sea Battle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD878CE81CC26B8A00AF3C99 /* Build configuration list for PBXNativeTarget "Sea Battle" */;
+			buildPhases = (
+				FD878CB71CC26B8500AF3C99 /* Sources */,
+				FD878CB81CC26B8500AF3C99 /* Frameworks */,
+				FD878CB91CC26B8500AF3C99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sea Battle";
+			productName = "Sea Battle";
+			productReference = FD878CBB1CC26B8500AF3C99 /* Sea Battle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD878CD31CC26B8800AF3C99 /* Sea BattleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD878CEB1CC26B8A00AF3C99 /* Build configuration list for PBXNativeTarget "Sea BattleTests" */;
+			buildPhases = (
+				FD878CD01CC26B8800AF3C99 /* Sources */,
+				FD878CD11CC26B8800AF3C99 /* Frameworks */,
+				FD878CD21CC26B8800AF3C99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD878CD61CC26B8800AF3C99 /* PBXTargetDependency */,
+			);
+			name = "Sea BattleTests";
+			productName = "Sea BattleTests";
+			productReference = FD878CD41CC26B8800AF3C99 /* Sea BattleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD878CDE1CC26B8800AF3C99 /* Sea BattleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD878CEE1CC26B8A00AF3C99 /* Build configuration list for PBXNativeTarget "Sea BattleUITests" */;
+			buildPhases = (
+				FD878CDB1CC26B8800AF3C99 /* Sources */,
+				FD878CDC1CC26B8800AF3C99 /* Frameworks */,
+				FD878CDD1CC26B8800AF3C99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD878CE11CC26B8900AF3C99 /* PBXTargetDependency */,
+			);
+			name = "Sea BattleUITests";
+			productName = "Sea BattleUITests";
+			productReference = FD878CDF1CC26B8900AF3C99 /* Sea BattleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD878CB31CC26B8500AF3C99 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Tsvigun Alexandr";
+				TargetAttributes = {
+					FD878CBA1CC26B8500AF3C99 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5D7GRV784H;
+					};
+					FD878CD31CC26B8800AF3C99 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5D7GRV784H;
+						TestTargetID = FD878CBA1CC26B8500AF3C99;
+					};
+					FD878CDE1CC26B8800AF3C99 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5D7GRV784H;
+						TestTargetID = FD878CBA1CC26B8500AF3C99;
+					};
+				};
+			};
+			buildConfigurationList = FD878CB61CC26B8500AF3C99 /* Build configuration list for PBXProject "Sea Battle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD878CB21CC26B8400AF3C99;
+			productRefGroup = FD878CBC1CC26B8500AF3C99 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD878CBA1CC26B8500AF3C99 /* Sea Battle */,
+				FD878CD31CC26B8800AF3C99 /* Sea BattleTests */,
+				FD878CDE1CC26B8800AF3C99 /* Sea BattleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD878CB91CC26B8500AF3C99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD878CCE1CC26B8700AF3C99 /* LaunchScreen.storyboard in Resources */,
+				FD878CCB1CC26B8700AF3C99 /* Assets.xcassets in Resources */,
+				FD878CC91CC26B8700AF3C99 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD878CD21CC26B8800AF3C99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD878CDD1CC26B8800AF3C99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD878CB71CC26B8500AF3C99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD878CC61CC26B8700AF3C99 /* ViewController.m in Sources */,
+				FD878CC31CC26B8700AF3C99 /* AppDelegate.m in Sources */,
+				FD878CC01CC26B8700AF3C99 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD878CD01CC26B8800AF3C99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD878CD91CC26B8800AF3C99 /* Sea_BattleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD878CDB1CC26B8800AF3C99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD878CE41CC26B8900AF3C99 /* Sea_BattleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD878CD61CC26B8800AF3C99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD878CBA1CC26B8500AF3C99 /* Sea Battle */;
+			targetProxy = FD878CD51CC26B8800AF3C99 /* PBXContainerItemProxy */;
+		};
+		FD878CE11CC26B8900AF3C99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD878CBA1CC26B8500AF3C99 /* Sea Battle */;
+			targetProxy = FD878CE01CC26B8900AF3C99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD878CC71CC26B8700AF3C99 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD878CC81CC26B8700AF3C99 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD878CCC1CC26B8700AF3C99 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD878CCD1CC26B8700AF3C99 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD878CE61CC26B8A00AF3C99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD878CE71CC26B8A00AF3C99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD878CE91CC26B8A00AF3C99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sea Battle/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tsvigunalexandr.Sea-Battle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FD878CEA1CC26B8A00AF3C99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sea Battle/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tsvigunalexandr.Sea-Battle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FD878CEC1CC26B8A00AF3C99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Sea BattleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tsvigunalexandr.Sea-BattleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sea Battle.app/Sea Battle";
+			};
+			name = Debug;
+		};
+		FD878CED1CC26B8A00AF3C99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Sea BattleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tsvigunalexandr.Sea-BattleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sea Battle.app/Sea Battle";
+			};
+			name = Release;
+		};
+		FD878CEF1CC26B8A00AF3C99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Sea BattleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tsvigunalexandr.Sea-BattleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Sea Battle";
+			};
+			name = Debug;
+		};
+		FD878CF01CC26B8A00AF3C99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Sea BattleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tsvigunalexandr.Sea-BattleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Sea Battle";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD878CB61CC26B8500AF3C99 /* Build configuration list for PBXProject "Sea Battle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD878CE61CC26B8A00AF3C99 /* Debug */,
+				FD878CE71CC26B8A00AF3C99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD878CE81CC26B8A00AF3C99 /* Build configuration list for PBXNativeTarget "Sea Battle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD878CE91CC26B8A00AF3C99 /* Debug */,
+				FD878CEA1CC26B8A00AF3C99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD878CEB1CC26B8A00AF3C99 /* Build configuration list for PBXNativeTarget "Sea BattleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD878CEC1CC26B8A00AF3C99 /* Debug */,
+				FD878CED1CC26B8A00AF3C99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD878CEE1CC26B8A00AF3C99 /* Build configuration list for PBXNativeTarget "Sea BattleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD878CEF1CC26B8A00AF3C99 /* Debug */,
+				FD878CF01CC26B8A00AF3C99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD878CB31CC26B8500AF3C99 /* Project object */;
+}
