@@ -22,8 +22,6 @@ static BOOL counter = YES;
 
 @implementation TSCalculationService
 
-#pragma mark - ModuleProtocol
-
 - (void)calculateTheAreaForRectangle:(CGPoint)transmittedPoint ships:(NSArray *)collectionShips
 {
     _rect = CGRectMake((long)[self calculationValuePositionX:transmittedPoint],

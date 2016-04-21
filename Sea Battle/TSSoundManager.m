@@ -30,16 +30,16 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"shoot" ofType:@"mp3"];
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:[NSURL fileURLWithPath:path]];
-    self.player = [[AVPlayer alloc] initWithPlayerItem:item];
-    self.player.volume = 0.7;
-    [self.player play];
+    _player = [[AVPlayer alloc] initWithPlayerItem:item];
+    _player.volume = 0.7;
+    [_player play];
+    [item release];
 }
 
 -(void)dealloc
 {
     [super dealloc];
-    [self.player release];
-    self.player = nil;
+    _player = nil;
 }
 
 @end

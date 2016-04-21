@@ -20,6 +20,9 @@
 		FD9F231D1CC8BC2100EE0243 /* TSSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9F231C1CC8BC2100EE0243 /* TSSoundManager.m */; };
 		FD9F23201CC8BD3700EE0243 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9F231F1CC8BD3700EE0243 /* AVFoundation.framework */; };
 		FD9F23221CC8C2AF00EE0243 /* shoot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD9F23211CC8C2AF00EE0243 /* shoot.mp3 */; };
+		FD9F23261CC8DE8C00EE0243 /* TSStarterController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9F23251CC8DE8C00EE0243 /* TSStarterController.m */; };
+		FD9F23291CC9330F00EE0243 /* TSHeadbandController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9F23281CC9330F00EE0243 /* TSHeadbandController.m */; };
+		FD9F23331CC9673E00EE0243 /* TSAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9F23321CC9673E00EE0243 /* TSAlerts.m */; };
 		FDD2B74A1CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD2B7491CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.m */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,12 @@
 		FD9F231C1CC8BC2100EE0243 /* TSSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSoundManager.m; sourceTree = "<group>"; };
 		FD9F231F1CC8BD3700EE0243 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FD9F23211CC8C2AF00EE0243 /* shoot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shoot.mp3; sourceTree = "<group>"; };
+		FD9F23241CC8DE8C00EE0243 /* TSStarterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSStarterController.h; sourceTree = "<group>"; };
+		FD9F23251CC8DE8C00EE0243 /* TSStarterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSStarterController.m; sourceTree = "<group>"; };
+		FD9F23271CC9330F00EE0243 /* TSHeadbandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHeadbandController.h; sourceTree = "<group>"; };
+		FD9F23281CC9330F00EE0243 /* TSHeadbandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHeadbandController.m; sourceTree = "<group>"; };
+		FD9F23311CC9673E00EE0243 /* TSAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAlerts.h; sourceTree = "<group>"; };
+		FD9F23321CC9673E00EE0243 /* TSAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAlerts.m; sourceTree = "<group>"; };
 		FDD2B7481CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCalculationOfResponseShots.h; sourceTree = "<group>"; };
 		FDD2B7491CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCalculationOfResponseShots.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +130,7 @@
 			children = (
 				FD878CC11CC26B8700AF3C99 /* AppDelegate.h */,
 				FD878CC21CC26B8700AF3C99 /* AppDelegate.m */,
+				FD9F232A1CC95EA900EE0243 /* Alerts */,
 				FD9F231E1CC8BC3900EE0243 /* Sound Manager */,
 				FD878CF81CC26DC500AF3C99 /* Model */,
 				FD878CF41CC26D6F00AF3C99 /* Controller */,
@@ -165,6 +175,10 @@
 			children = (
 				FD878CF11CC26BC200AF3C99 /* TSGameController.h */,
 				FD878CF21CC26BC200AF3C99 /* TSGameController.m */,
+				FD9F23241CC8DE8C00EE0243 /* TSStarterController.h */,
+				FD9F23251CC8DE8C00EE0243 /* TSStarterController.m */,
+				FD9F23271CC9330F00EE0243 /* TSHeadbandController.h */,
+				FD9F23281CC9330F00EE0243 /* TSHeadbandController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -197,6 +211,16 @@
 				FD9F23211CC8C2AF00EE0243 /* shoot.mp3 */,
 			);
 			name = Sample;
+			sourceTree = "<group>";
+		};
+		FD9F232A1CC95EA900EE0243 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				FD9F23311CC9673E00EE0243 /* TSAlerts.h */,
+				FD9F23321CC9673E00EE0243 /* TSAlerts.m */,
+			);
+			name = Alerts;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,13 +358,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9F23261CC8DE8C00EE0243 /* TSStarterController.m in Sources */,
 				FD878CF71CC26DB400AF3C99 /* TSCalculationService.m in Sources */,
 				FD9F231D1CC8BC2100EE0243 /* TSSoundManager.m in Sources */,
 				FDD2B74A1CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.m in Sources */,
 				FD878CF31CC26BC200AF3C99 /* TSGameController.m in Sources */,
+				FD9F23291CC9330F00EE0243 /* TSHeadbandController.m in Sources */,
 				FD878CC31CC26B8700AF3C99 /* AppDelegate.m in Sources */,
 				FD878CC01CC26B8700AF3C99 /* main.m in Sources */,
 				FD5854D21CC839850051CD58 /* TSGeneratedPoint.m in Sources */,
+				FD9F23331CC9673E00EE0243 /* TSAlerts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

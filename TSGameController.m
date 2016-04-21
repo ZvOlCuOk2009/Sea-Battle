@@ -11,9 +11,10 @@
 #import "TSCalculationOfResponseShots.h"
 #import "TSGeneratedPoint.h"
 #import "TSSoundManager.h"
+#import "TSStarterController.h"
+#import "TSAlerts.h"
 
 static BOOL positon = NO;
-static BOOL start = NO;
 
 @interface TSGameController () <TSCalculationServiceDelegate, TSCalculationOfResponseShotsDelegate, TSGeneratedPointDelegate>
 
@@ -53,7 +54,7 @@ static BOOL start = NO;
     UITouch *touch = [touches anyObject];
     CGPoint locationPoint = [touch locationInView:self.view];
     _currentView = [self.view hitTest:locationPoint withEvent:event];
-    if (start == YES) {
+    if (positionButtonStart == YES) {
         [[TSSoundManager sharedManager] shotSound];
         BOOL verification = CGRectContainsPoint(_hitView.frame, locationPoint);
         if (verification == NO) {
@@ -114,11 +115,7 @@ static BOOL start = NO;
 
 - (void)noteShot:(CGRect)rect color:(UIColor *)color
 {
-    _hitView = [[UIView alloc] initWithFrame:rect];
-    _hitView.backgroundColor = color;
-    _hitView.alpha = 0.7;
-    _hitView.userInteractionEnabled = NO;
-    [self.view addSubview:_hitView];
+    [TSAlerts viewNoteShot:rect color:color parentVIew:self.view view:_hitView];
 }
 
 - (void)transitionProgress
@@ -134,29 +131,38 @@ static BOOL start = NO;
 - (void)handleTapGesture:(UITapGestureRecognizer *)tapGesture
 {
     if (positon == NO) {
-        _currentView.transform = CGAffineTransformMakeRotation(M_PI / 2);
+        [UIView animateWithDuration:0.2
+                         animations:^{
+                             _currentView.transform = CGAffineTransformMakeRotation(M_PI / 2);
+                         }];
         positon = YES;
     } else {
-        _currentView.transform = CGAffineTransformMakeRotation(M_PI);
+        [UIView animateWithDuration:0.2
+                         animations:^{
+                             _currentView.transform = CGAffineTransformMakeRotation(M_PI);
+                         }];
         positon = NO;
     }
 }
 
 #pragma mark - Actions
 
-- (IBAction)actionStart:(id)sender {
-    
+- (IBAction)backAtion:(id)sender {
+ 
+    UIButton *yesButton = [[UIButton alloc]init];
+    UIButton *noButton = [[UIButton alloc]init];
+    [TSAlerts createdAlertGameOver:self.view button:yesButton button:noButton];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)userInteractionEnabled
+{
     for (UIView *ship in self.collectionShip) {
         ship.userInteractionEnabled = NO;
     }
     for (UIView *ship in self.collectionEnemyShip) {
         ship.userInteractionEnabled = NO;
     }
-    start = YES;
-}
-- (IBAction)nextAction:(id)sender {
-    
-    
 }
 
 #pragma mark - Destruction of objects
