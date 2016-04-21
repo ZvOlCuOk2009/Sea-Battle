@@ -7,6 +7,7 @@
 //
 
 #import "TSCalculationService.h"
+#import "TSSoundManager.h"
 
 static CGFloat sideRect = 22;
 static CGFloat correctionValueX = 23;
@@ -28,16 +29,17 @@ static BOOL counter = YES;
     _rect = CGRectMake((long)[self calculationValuePositionX:transmittedPoint],
                        (long)[self calculationValuePositionY:transmittedPoint], sideRect, sideRect);
     for (UIView *ship in collectionShips) {
-        if (CGRectContainsPoint(ship.frame, transmittedPoint)) {
-            NSLog(@"Affected rect x = %ld, y = %ld", (long)[self calculationValuePositionX:transmittedPoint],
-                                                     (long)[self calculationValuePositionY:transmittedPoint]);
+        BOOL verification = CGRectContainsPoint(ship.frame, transmittedPoint);
+        if (verification == YES) {
+//            NSLog(@"RECT USER x = %ld, y = %ld", (long)[self calculationValuePositionX:transmittedPoint],
+//                                                     (long)[self calculationValuePositionY:transmittedPoint]);
             [self.delegate calculationResponseView:_rect color:[self redBackgroundColor]];
             counter = NO;
         }
     }
     if (counter == YES) {
         [self.delegate calculationResponseView:_rect color:[self grayBackgroundColor]];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self.delegate transitionProgress];
         });
     } else {

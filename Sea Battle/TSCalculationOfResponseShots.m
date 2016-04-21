@@ -13,7 +13,7 @@ static CGFloat correctionValueX = 22;
 static CGFloat correctionValueY = 12;
 static NSInteger indentationOnX = 21;
 static NSInteger indentationOnY = 79;
-static NSInteger fieldSide = 218;
+static NSInteger fieldSide = 220;
 static BOOL counter = YES;
 
 @interface TSCalculationOfResponseShots ()
@@ -30,8 +30,9 @@ static BOOL counter = YES;
     _overallPoint = [self randomPoint];
     _rect = [self generationOfRectangleBasedOnRandomPoint];
     for (UIView *ship in collectionShips) {
-        if (CGRectContainsPoint(ship.frame, _overallPoint)) {
-            [self.delegate calculationEnemyShotView:_rect color:[self redBackgroundColor]];
+        BOOL verification = CGRectContainsPoint(ship.frame, _overallPoint);
+        if (verification == YES) {
+            [self.delegate calculationEnemyShotView:_rect point:_overallPoint color:[self redBackgroundColor]];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self.delegate transitionProgress];
             });
@@ -39,7 +40,7 @@ static BOOL counter = YES;
         }
     }
     if (counter == YES) {
-        [self.delegate calculationEnemyShotView:_rect color:[self grayBackgroundColor]];
+        [self.delegate calculationEnemyShotView:_rect point:_overallPoint color:[self grayBackgroundColor]];
     } else {
         counter = YES;
     }
@@ -63,7 +64,7 @@ static BOOL counter = YES;
 {
     CGRect rect = CGRectMake([self calculationValuePositionX:_overallPoint],
                              [self calculationValuePositionY:_overallPoint], sideRect, sideRect);
-    NSLog(@"RECT x = %ld, y = %ld, width = 22, height = 22", (long)rect.origin.x, (long)rect.origin.y);
+//    NSLog(@"RECT ENEMY x = %ld, y = %ld, width = 22, height = 22", (long)rect.origin.x, (long)rect.origin.y);
     return rect;
 }
 

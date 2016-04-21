@@ -6,6 +6,8 @@
 //  Copyright © 2016 Tsvigun Alexandr. All rights reserved.
 //
 
+//  Класс для расчета случайного выстрела по флоту пользователя и отображения пораженного участка на поле пользователя
+
 #import <Foundation/Foundation.h>
 #import "TSGameController.h"
 
@@ -13,7 +15,7 @@
 
 @required
 
-- (void)calculationEnemyShotView:(CGRect)rect color:(UIColor *)color;
+- (void)calculationEnemyShotView:(CGRect)rect point:(CGPoint)point color:(UIColor *)color;
 
 @optional
 
