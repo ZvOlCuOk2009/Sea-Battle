@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD5854D21CC839850051CD58 /* TSGeneratedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5854D11CC839850051CD58 /* TSGeneratedPoint.m */; };
 		FD878CC01CC26B8700AF3C99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CBF1CC26B8700AF3C99 /* main.m */; };
 		FD878CC31CC26B8700AF3C99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CC21CC26B8700AF3C99 /* AppDelegate.m */; };
-		FD878CC61CC26B8700AF3C99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CC51CC26B8700AF3C99 /* ViewController.m */; };
 		FD878CC91CC26B8700AF3C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD878CC71CC26B8700AF3C99 /* Main.storyboard */; };
 		FD878CCB1CC26B8700AF3C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD878CCA1CC26B8700AF3C99 /* Assets.xcassets */; };
 		FD878CCE1CC26B8700AF3C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD878CCC1CC26B8700AF3C99 /* LaunchScreen.storyboard */; };
 		FD878CD91CC26B8800AF3C99 /* Sea_BattleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CD81CC26B8800AF3C99 /* Sea_BattleTests.m */; };
 		FD878CE41CC26B8900AF3C99 /* Sea_BattleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CE31CC26B8900AF3C99 /* Sea_BattleUITests.m */; };
+		FD878CF31CC26BC200AF3C99 /* TSGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CF21CC26BC200AF3C99 /* TSGameController.m */; };
+		FD878CF71CC26DB400AF3C99 /* TSCalculationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FD878CF61CC26DB400AF3C99 /* TSCalculationService.m */; };
+		FD9F231D1CC8BC2100EE0243 /* TSSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9F231C1CC8BC2100EE0243 /* TSSoundManager.m */; };
+		FD9F23201CC8BD3700EE0243 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9F231F1CC8BD3700EE0243 /* AVFoundation.framework */; };
+		FD9F23221CC8C2AF00EE0243 /* shoot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD9F23211CC8C2AF00EE0243 /* shoot.mp3 */; };
+		FD9F23261CC8DE8C00EE0243 /* TSStarterController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9F23251CC8DE8C00EE0243 /* TSStarterController.m */; };
+		FD9F23291CC9330F00EE0243 /* TSHeadbandController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9F23281CC9330F00EE0243 /* TSHeadbandController.m */; };
+		FD9F23331CC9673E00EE0243 /* TSAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9F23321CC9673E00EE0243 /* TSAlerts.m */; };
+		FDD2B74A1CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD2B7491CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD5854D01CC839850051CD58 /* TSGeneratedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSGeneratedPoint.h; sourceTree = "<group>"; };
+		FD5854D11CC839850051CD58 /* TSGeneratedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSGeneratedPoint.m; sourceTree = "<group>"; };
 		FD878CBB1CC26B8500AF3C99 /* Sea Battle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sea Battle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD878CBF1CC26B8700AF3C99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD878CC11CC26B8700AF3C99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD878CC21CC26B8700AF3C99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FD878CC41CC26B8700AF3C99 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FD878CC51CC26B8700AF3C99 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FD878CC81CC26B8700AF3C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD878CCA1CC26B8700AF3C99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD878CCD1CC26B8700AF3C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +60,22 @@
 		FD878CDF1CC26B8900AF3C99 /* Sea BattleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sea BattleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD878CE31CC26B8900AF3C99 /* Sea_BattleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sea_BattleUITests.m; sourceTree = "<group>"; };
 		FD878CE51CC26B8A00AF3C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD878CF11CC26BC200AF3C99 /* TSGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSGameController.h; path = ../TSGameController.h; sourceTree = "<group>"; };
+		FD878CF21CC26BC200AF3C99 /* TSGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSGameController.m; path = ../TSGameController.m; sourceTree = "<group>"; };
+		FD878CF51CC26DB400AF3C99 /* TSCalculationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSCalculationService.h; path = ../TSCalculationService.h; sourceTree = "<group>"; };
+		FD878CF61CC26DB400AF3C99 /* TSCalculationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSCalculationService.m; path = ../TSCalculationService.m; sourceTree = "<group>"; };
+		FD9F231B1CC8BC2100EE0243 /* TSSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSoundManager.h; sourceTree = "<group>"; };
+		FD9F231C1CC8BC2100EE0243 /* TSSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSoundManager.m; sourceTree = "<group>"; };
+		FD9F231F1CC8BD3700EE0243 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FD9F23211CC8C2AF00EE0243 /* shoot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shoot.mp3; sourceTree = "<group>"; };
+		FD9F23241CC8DE8C00EE0243 /* TSStarterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSStarterController.h; sourceTree = "<group>"; };
+		FD9F23251CC8DE8C00EE0243 /* TSStarterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSStarterController.m; sourceTree = "<group>"; };
+		FD9F23271CC9330F00EE0243 /* TSHeadbandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHeadbandController.h; sourceTree = "<group>"; };
+		FD9F23281CC9330F00EE0243 /* TSHeadbandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHeadbandController.m; sourceTree = "<group>"; };
+		FD9F23311CC9673E00EE0243 /* TSAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAlerts.h; sourceTree = "<group>"; };
+		FD9F23321CC9673E00EE0243 /* TSAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAlerts.m; sourceTree = "<group>"; };
+		FDD2B7481CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCalculationOfResponseShots.h; sourceTree = "<group>"; };
+		FDD2B7491CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCalculationOfResponseShots.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9F23201CC8BD3700EE0243 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +107,7 @@
 		FD878CB21CC26B8400AF3C99 = {
 			isa = PBXGroup;
 			children = (
+				FD9F231F1CC8BD3700EE0243 /* AVFoundation.framework */,
 				FD878CBD1CC26B8700AF3C99 /* Sea Battle */,
 				FD878CD71CC26B8800AF3C99 /* Sea BattleTests */,
 				FD878CE21CC26B8900AF3C99 /* Sea BattleUITests */,
@@ -103,10 +130,13 @@
 			children = (
 				FD878CC11CC26B8700AF3C99 /* AppDelegate.h */,
 				FD878CC21CC26B8700AF3C99 /* AppDelegate.m */,
-				FD878CC41CC26B8700AF3C99 /* ViewController.h */,
-				FD878CC51CC26B8700AF3C99 /* ViewController.m */,
+				FD9F232A1CC95EA900EE0243 /* Alerts */,
+				FD9F231E1CC8BC3900EE0243 /* Sound Manager */,
+				FD878CF81CC26DC500AF3C99 /* Model */,
+				FD878CF41CC26D6F00AF3C99 /* Controller */,
 				FD878CC71CC26B8700AF3C99 /* Main.storyboard */,
 				FD878CCA1CC26B8700AF3C99 /* Assets.xcassets */,
+				FD9F23231CC8C2C600EE0243 /* Sample */,
 				FD878CCC1CC26B8700AF3C99 /* LaunchScreen.storyboard */,
 				FD878CCF1CC26B8700AF3C99 /* Info.plist */,
 				FD878CBE1CC26B8700AF3C99 /* Supporting Files */,
@@ -138,6 +168,59 @@
 				FD878CE51CC26B8A00AF3C99 /* Info.plist */,
 			);
 			path = "Sea BattleUITests";
+			sourceTree = "<group>";
+		};
+		FD878CF41CC26D6F00AF3C99 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD878CF11CC26BC200AF3C99 /* TSGameController.h */,
+				FD878CF21CC26BC200AF3C99 /* TSGameController.m */,
+				FD9F23241CC8DE8C00EE0243 /* TSStarterController.h */,
+				FD9F23251CC8DE8C00EE0243 /* TSStarterController.m */,
+				FD9F23271CC9330F00EE0243 /* TSHeadbandController.h */,
+				FD9F23281CC9330F00EE0243 /* TSHeadbandController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FD878CF81CC26DC500AF3C99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD878CF51CC26DB400AF3C99 /* TSCalculationService.h */,
+				FD878CF61CC26DB400AF3C99 /* TSCalculationService.m */,
+				FDD2B7481CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.h */,
+				FDD2B7491CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.m */,
+				FD5854D01CC839850051CD58 /* TSGeneratedPoint.h */,
+				FD5854D11CC839850051CD58 /* TSGeneratedPoint.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FD9F231E1CC8BC3900EE0243 /* Sound Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FD9F231B1CC8BC2100EE0243 /* TSSoundManager.h */,
+				FD9F231C1CC8BC2100EE0243 /* TSSoundManager.m */,
+			);
+			name = "Sound Manager";
+			sourceTree = "<group>";
+		};
+		FD9F23231CC8C2C600EE0243 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				FD9F23211CC8C2AF00EE0243 /* shoot.mp3 */,
+			);
+			name = Sample;
+			sourceTree = "<group>";
+		};
+		FD9F232A1CC95EA900EE0243 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				FD9F23311CC9673E00EE0243 /* TSAlerts.h */,
+				FD9F23321CC9673E00EE0243 /* TSAlerts.m */,
+			);
+			name = Alerts;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +285,7 @@
 		FD878CB31CC26B8500AF3C99 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TS;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Tsvigun Alexandr";
 				TargetAttributes = {
@@ -246,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9F23221CC8C2AF00EE0243 /* shoot.mp3 in Resources */,
 				FD878CCE1CC26B8700AF3C99 /* LaunchScreen.storyboard in Resources */,
 				FD878CCB1CC26B8700AF3C99 /* Assets.xcassets in Resources */,
 				FD878CC91CC26B8700AF3C99 /* Main.storyboard in Resources */,
@@ -273,9 +358,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD878CC61CC26B8700AF3C99 /* ViewController.m in Sources */,
+				FD9F23261CC8DE8C00EE0243 /* TSStarterController.m in Sources */,
+				FD878CF71CC26DB400AF3C99 /* TSCalculationService.m in Sources */,
+				FD9F231D1CC8BC2100EE0243 /* TSSoundManager.m in Sources */,
+				FDD2B74A1CC51B8F00E7A0A6 /* TSCalculationOfResponseShots.m in Sources */,
+				FD878CF31CC26BC200AF3C99 /* TSGameController.m in Sources */,
+				FD9F23291CC9330F00EE0243 /* TSHeadbandController.m in Sources */,
 				FD878CC31CC26B8700AF3C99 /* AppDelegate.m in Sources */,
 				FD878CC01CC26B8700AF3C99 /* main.m in Sources */,
+				FD5854D21CC839850051CD58 /* TSGeneratedPoint.m in Sources */,
+				FD9F23331CC9673E00EE0243 /* TSAlerts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,10 +510,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "Sea Battle/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsvigunalexandr.Sea-Battle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -429,10 +524,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "Sea Battle/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsvigunalexandr.Sea-Battle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -501,6 +599,7 @@
 				FD878CEA1CC26B8A00AF3C99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD878CEB1CC26B8A00AF3C99 /* Build configuration list for PBXNativeTarget "Sea BattleTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +608,7 @@
 				FD878CED1CC26B8A00AF3C99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD878CEE1CC26B8A00AF3C99 /* Build configuration list for PBXNativeTarget "Sea BattleUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +617,7 @@
 				FD878CF01CC26B8A00AF3C99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
