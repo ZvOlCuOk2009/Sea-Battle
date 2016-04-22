@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TSGameControllerDelegate
+
+- (NSArray *)rectViewOne;
+
+@end
+
 @interface TSGameController : UIViewController
+
+@property (assign, nonatomic) id <TSGameControllerDelegate> delegate;
 
 @end

@@ -9,6 +9,10 @@
 #import "TSAlerts.h"
 
 static NSString *alert = @"Закончить игру?";
+static NSString *font = @"Savoye LET";
+static CGFloat redColor = 113.0 / 255.0;
+static CGFloat greenColor = 43.0 / 255.0;
+static CGFloat blueColor = 249.0 / 255.0;
 
 @implementation TSAlerts
 
@@ -26,43 +30,31 @@ static NSString *alert = @"Закончить игру?";
 
 #pragma mark - Created alert game over
 
-+ (void)createdAlertGameOver:(UIView *)parentView button:(UIButton *)yesButon button:(UIButton *)noButton;
++ (UIView *)createdAlertGameOver:(UIView *)parentView;
 {
     CGRect rect = CGRectMake(184, -100, 200, 120);
-    UIColor *color = [UIColor colorWithRed:113.0 / 255.0 green:43.0 / 255.0 blue:249.0 / 255.0 alpha:1];
-    UIView *view = [[UIView alloc] initWithFrame:rect];
-    view.backgroundColor = [UIColor whiteColor];
-    view.alpha = 0;
-    view.layer.cornerRadius = 5;
-    [parentView addSubview:view];
+    UIColor *color = [UIColor colorWithRed:redColor green:greenColor blue:blueColor alpha:1];
+    UIView *alertView = [[UIView alloc] initWithFrame:rect];
+    alertView.backgroundColor = [UIColor whiteColor];
+    alertView.alpha = 0;
+    alertView.layer.cornerRadius = 5;
+    [parentView addSubview:alertView];
     
-    CGRect labelRect = CGRectMake(25, 15, 150, 50);
+    CGRect labelRect = CGRectMake(20, 15, 170, 50);
     UILabel *label = [[UILabel alloc] initWithFrame:labelRect];
     [label setTextColor:color];
-    [label setFont:[UIFont fontWithName:@"Savoye LET" size:32.0]];
+    [label setFont:[UIFont fontWithName:font size:34.0]];
     [label setText:alert];
-    [view addSubview:label];
-    
-    yesButon = [[UIButton alloc] initWithFrame:CGRectMake(25, 50, 50, 50)];
-    [yesButon setTintColor:color];
-    [yesButon setTitle:@"Да" forState:UIControlStateNormal];
-    [label addSubview:yesButon];
-    
-    noButton = [[UIButton alloc] initWithFrame:CGRectMake(125, 50, 50, 50)];
-    [noButton setTintColor:color];
-    [noButton setTitle:@"Нет" forState:UIControlStateNormal];
-    [label addSubview:noButton];
+    [alertView addSubview:label];
     
     CGRect newRect = CGRectMake(184, 100, 200, 120);
     [UIView animateWithDuration:0.5
                      animations:^{
-                         view.frame = newRect;
-                         view.alpha = 0.85f;
+                         alertView.frame = newRect;
+                         alertView.alpha = 0.85f;
                      }];
-    [yesButon autorelease];
-    [noButton autorelease];
     [label autorelease];
-    [view autorelease];
+    return alertView;
 }
 
 @end

@@ -13,7 +13,7 @@ static CGFloat correctionValueX = 22;
 static CGFloat correctionValueY = 12;
 static NSInteger indentationOnX = 21;
 static NSInteger indentationOnY = 79;
-static NSInteger fieldSide = 220;
+static int fieldSide = 220;
 static BOOL counter = YES;
 
 @interface TSCalculationOfResponseShots ()
@@ -70,8 +70,8 @@ static BOOL counter = YES;
 
 - (CGPoint)randomPoint
 {
-    CGFloat pointX = arc4random_uniform(fieldSide) + indentationOnX;
-    CGFloat pointY = arc4random_uniform(fieldSide) + indentationOnY;
+    NSInteger pointX = arc4random_uniform(fieldSide) + indentationOnX;
+    NSInteger pointY = arc4random_uniform(fieldSide) + indentationOnY;
     CGPoint point = CGPointMake(pointX, pointY);
     return point;
 }

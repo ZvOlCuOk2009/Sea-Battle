@@ -13,28 +13,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HX2-lU-Nuk">
-                                <rect key="frame" x="231" y="20" width="107" height="37"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start" id="2R3-Oo-pjq">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" alpha="0.0" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SHK-iH-R2A">
+                                <rect key="frame" x="134" y="75" width="300" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="46"/>
-                                <state key="normal" title="Старт">
+                                <state key="normal" title="Играть по блютузу">
                                     <color key="titleColor" red="0.4431372549" green="0.16862745100000001" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRS-Qm-mdO"/>
+                                    <action selector="nextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="76W-tl-019"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HX2-lU-Nuk">
+                                <rect key="frame" x="134" y="10" width="300" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="46"/>
+                                <state key="normal" title="Играть с компьютером">
+                                    <color key="titleColor" red="0.4431372549" green="0.16862745100000001" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
                                     <action selector="startAction:" destination="TgN-WZ-d6n" eventType="touchUpInside" id="9fn-RI-58u"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="K4n-DQ-awy">
+                                <rect key="frame" x="147" y="260" width="4" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.44359583592522794" green="0.17178751155501523" blue="0.97823469814437691" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="gameBluetoothButton" destination="SHK-iH-R2A" id="bCQ-ME-Zby"/>
+                        <outlet property="gameCompButton" destination="HX2-lU-Nuk" id="9IZ-Dy-tAS"/>
+                        <outlet property="loadingIndicatorView" destination="K4n-DQ-awy" id="aRC-F4-grx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ey-rJ-JeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-429" y="227"/>
+            <point key="canvasLocation" x="-428" y="210"/>
         </scene>
         <!--Game Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -45,12 +80,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="kwW-LL-o94">
-                                <rect key="frame" x="-1000" y="-1000" width="2000" height="2000"/>
+                                <rect key="frame" x="-1000" y="-1000" width="2500" height="2500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hbg-hl-imY">
-                                <rect key="frame" x="20" y="20" width="107" height="46"/>
+                                <rect key="frame" x="90" y="12" width="107" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="46"/>
@@ -62,16 +97,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uf9-py-ybR">
-                                <rect key="frame" x="209" y="20" width="152" height="37"/>
+                                <rect key="frame" x="350" y="12" width="152" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="46"/>
                                 <state key="normal" title="Настройки">
                                     <color key="titleColor" red="0.4431372549" green="0.16862745100000001" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="actionStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BqD-6z-B9g"/>
-                                </connections>
                             </button>
                             <view alpha="0.75" tag="1" contentMode="scaleToFill" id="IPl-2r-QXh">
                                 <rect key="frame" x="109" y="189" width="88" height="22"/>
@@ -203,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="227"/>
+            <point key="canvasLocation" x="906" y="210"/>
         </scene>
         <!--Starter Controller-->
         <scene sceneID="ek8-a6-g4U">
@@ -213,21 +245,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fpz-RR-zWp">
-                                <rect key="frame" x="20" y="20" width="107" height="46"/>
+                            <view contentMode="scaleToFill" id="nU8-Uc-L1X">
+                                <rect key="frame" x="-966" y="-1090" width="2500" height="2500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hnc-54-6jS">
+                                <rect key="frame" x="208" y="12" width="153" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="46"/>
-                                <state key="normal" title="Назад">
+                                <state key="normal" title="Настройки">
                                     <color key="titleColor" red="0.4431372549" green="0.16862745100000001" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="backAction:" destination="i9H-Zc-6Yn" eventType="touchUpInside" id="xKq-5J-yXX"/>
-                                    <action selector="nextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JmO-uu-93f"/>
-                                </connections>
                             </button>
                             <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3rP-eY-m3v">
-                                <rect key="frame" x="440" y="20" width="107" height="37"/>
+                                <rect key="frame" x="420" y="12" width="107" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="46"/>
@@ -236,7 +269,68 @@
                                 </state>
                                 <connections>
                                     <action selector="nextAction:" destination="i9H-Zc-6Yn" eventType="touchUpInside" id="SPb-7o-aQW"/>
-                                    <action selector="nextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rvA-Cf-R5P"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.75" tag="1" contentMode="scaleToFill" id="NeG-tv-hgp">
+                                <rect key="frame" x="309" y="101" width="88" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.42745098040000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.75" tag="3" contentMode="scaleToFill" id="CLd-0t-59t">
+                                <rect key="frame" x="309" y="145" width="66" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.42745098040000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.75" tag="2" contentMode="scaleToFill" id="h2S-ea-nuz">
+                                <rect key="frame" x="309" y="188" width="66" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.42745098040000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.75" tag="10" contentMode="scaleToFill" id="WBG-kQ-YQN">
+                                <rect key="frame" x="463" y="145" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.42745098040000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.75" tag="6" contentMode="scaleToFill" id="edY-ju-mje">
+                                <rect key="frame" x="419" y="232" width="44" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.42745098040000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.75" tag="5" contentMode="scaleToFill" id="d4B-25-xZj">
+                                <rect key="frame" x="419" y="188" width="44" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.42745098040000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.75" tag="4" contentMode="scaleToFill" id="Sc7-KC-EEP">
+                                <rect key="frame" x="309" y="232" width="44" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.42745098040000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.75" tag="7" contentMode="scaleToFill" id="VOb-hD-tqM">
+                                <rect key="frame" x="463" y="101" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.42745098040000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.75" tag="8" contentMode="scaleToFill" id="NiB-W4-10I">
+                                <rect key="frame" x="419" y="101" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.42745098040000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.75" tag="9" contentMode="scaleToFill" id="YAN-Hx-Yb8">
+                                <rect key="frame" x="419" y="145" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.42745098040000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fpz-RR-zWp">
+                                <rect key="frame" x="40" y="12" width="107" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="46"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" red="0.4431372549" green="0.16862745100000001" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backAction:" destination="i9H-Zc-6Yn" eventType="touchUpInside" id="xKq-5J-yXX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -245,10 +339,25 @@
                     <navigationItem key="navigationItem" id="cj0-sJ-iRq"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outletCollection property="collectionShip" destination="NeG-tv-hgp" id="zza-cU-Ynh"/>
+                        <outletCollection property="collectionShip" destination="CLd-0t-59t" id="Lwl-Jq-Hty"/>
+                        <outletCollection property="collectionShip" destination="h2S-ea-nuz" id="CVa-yz-QyS"/>
+                        <outletCollection property="collectionShip" destination="Sc7-KC-EEP" id="9Qz-ud-fy1"/>
+                        <outletCollection property="collectionShip" destination="edY-ju-mje" id="jNY-hI-19c"/>
+                        <outletCollection property="collectionShip" destination="d4B-25-xZj" id="XBe-sj-zVl"/>
+                        <outletCollection property="collectionShip" destination="YAN-Hx-Yb8" id="z8T-UF-qTI"/>
+                        <outletCollection property="collectionShip" destination="WBG-kQ-YQN" id="O7d-2l-h4R"/>
+                        <outletCollection property="collectionShip" destination="NiB-W4-10I" id="rou-NN-JQR"/>
+                        <outletCollection property="collectionShip" destination="VOb-hD-tqM" id="LFh-oc-D1u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7g-dX-H03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="227"/>
+            <point key="canvasLocation" x="268" y="210"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="start" width="568" height="320"/>
+    </resources>
 </document>

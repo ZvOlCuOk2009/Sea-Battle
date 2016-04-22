@@ -8,6 +8,9 @@
 
 #import "TSSoundManager.h"
 
+static NSString *pathResource = @"shoot";
+static NSString *typeSound = @"mp3";
+
 @interface TSSoundManager ()
 
 @property (retain, nonatomic) AVPlayer *player;
@@ -28,7 +31,7 @@
 
 - (void)shotSound
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"shoot" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:pathResource ofType:typeSound];
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:[NSURL fileURLWithPath:path]];
     _player = [[AVPlayer alloc] initWithPlayerItem:item];
     _player.volume = 0.7;

@@ -14,18 +14,24 @@
 #import "TSStarterController.h"
 #import "TSAlerts.h"
 
-static BOOL positon = NO;
+//static BOOL positon = NO;
+static BOOL userInteractionAlert = NO;
+static NSString *backgroundSheet = @"battle";
+static NSString *buttonImgYes = @"button yes";
+static NSString *buttonImgNo = @"button no";
 
-@interface TSGameController () <TSCalculationServiceDelegate, TSCalculationOfResponseShotsDelegate, TSGeneratedPointDelegate>
+@interface TSGameController () <TSCalculationServiceDelegate, TSCalculationOfResponseShotsDelegate>
 
 @property (retain, nonatomic) IBOutletCollection(UIView) NSArray *collectionShip;
 @property (retain, nonatomic) IBOutletCollection(UIView) NSArray *collectionEnemyShip;
-@property (retain, nonatomic) UIView *currentView;
+//@property (retain, nonatomic) UIView *currentView;
 @property (retain, nonatomic) UIView *hitView;
+@property (retain, nonatomic) UIView *alertView;
+@property (retain, nonatomic) UIButton *button;
 
 @property (retain, nonatomic) TSCalculationService *servise;
 @property (retain, nonatomic) TSCalculationOfResponseShots *responseShots;
-@property (retain, nonatomic) TSGeneratedPoint *generationPoint;
+
 
 @end
 
@@ -33,18 +39,20 @@ static BOOL positon = NO;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *image = [UIImage imageNamed:@"sheet"];
+    UIImage *image = [UIImage imageNamed:backgroundSheet];
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
-                                          initWithTarget:self action:@selector(handleTapGesture:)];
-    tapGesture.numberOfTapsRequired = 2;
-    [self.view addGestureRecognizer:tapGesture];
-    [tapGesture release];
+    UIView *frame = [[self.delegate rectViewOne] objectAtIndex:0];
+    [self.view addSubview:frame];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 #pragma mark - Touches
@@ -53,14 +61,16 @@ static BOOL positon = NO;
 {
     UITouch *touch = [touches anyObject];
     CGPoint locationPoint = [touch locationInView:self.view];
-    _currentView = [self.view hitTest:locationPoint withEvent:event];
+//    _currentView = [self.view hitTest:locationPoint withEvent:event];
     if (positionButtonStart == YES) {
-        [[TSSoundManager sharedManager] shotSound];
         BOOL verification = CGRectContainsPoint(_hitView.frame, locationPoint);
         if (verification == NO) {
-            _servise = [[TSCalculationService alloc] init];
-            _servise.delegate = self;
-            [_servise calculateTheAreaForRectangle:locationPoint ships:self.collectionEnemyShip];
+            if (userInteractionAlert == NO) {
+                [[TSSoundManager sharedManager] shotSound];
+                _servise = [[TSCalculationService alloc] init];
+                _servise.delegate = self;
+                [_servise calculateTheAreaForRectangle:locationPoint ships:self.collectionEnemyShip];
+            }
         } else {
             NSLog(@"ПОВТОР!");
         }
@@ -69,16 +79,13 @@ static BOOL positon = NO;
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event
 {
-    CGPoint locationPoint = [[touches anyObject] locationInView:self.view];
-    _currentView.center = locationPoint;
+//    CGPoint locationPoint = [[touches anyObject] locationInView:self.view];
+//    _currentView.center = locationPoint;
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event
 {
-    CGPoint point = _currentView.frame.origin;
-    _generationPoint = [[TSGeneratedPoint alloc] init];
-    _generationPoint.delegate = self;
-    [_generationPoint receivingPoint:point];
+    
 }
 
 #pragma mark - TSCalculationServiceDelegate
@@ -105,18 +112,14 @@ static BOOL positon = NO;
     }
 }
 
-#pragma mark - TSGeneratedPointDelegate
-
-- (void)pointTransmission:(CGPoint)point
-{
-    CGRect frame = CGRectMake(point.x, point.y, _currentView.frame.size.width, _currentView.frame.size.height);
-    _currentView.frame = frame;
-}
+#pragma mark - After firing indication
 
 - (void)noteShot:(CGRect)rect color:(UIColor *)color
 {
     [TSAlerts viewNoteShot:rect color:color parentVIew:self.view view:_hitView];
 }
+
+#pragma mark - Enemy shot
 
 - (void)transitionProgress
 {
@@ -126,33 +129,65 @@ static BOOL positon = NO;
     [_responseShots shotRequest:self.collectionShip];
 }
 
-#pragma mark - UITapGestureRecognizer
-
-- (void)handleTapGesture:(UITapGestureRecognizer *)tapGesture
-{
-    if (positon == NO) {
-        [UIView animateWithDuration:0.2
-                         animations:^{
-                             _currentView.transform = CGAffineTransformMakeRotation(M_PI / 2);
-                         }];
-        positon = YES;
-    } else {
-        [UIView animateWithDuration:0.2
-                         animations:^{
-                             _currentView.transform = CGAffineTransformMakeRotation(M_PI);
-                         }];
-        positon = NO;
-    }
-}
+//#pragma mark - UITapGestureRecognizer
+//
+//- (void)handleTapGesture:(UITapGestureRecognizer *)tapGesture
+//{
+//    if (positon == NO) {
+//        [UIView animateWithDuration:0.2
+//                         animations:^{
+//                             _currentView.transform = CGAffineTransformMakeRotation(M_PI / 2);
+//                         }];
+//        positon = YES;
+//    } else {
+//        [UIView animateWithDuration:0.2
+//                         animations:^{
+//                             _currentView.transform = CGAffineTransformMakeRotation(M_PI);
+//                         }];
+//        positon = NO;
+//    }
+//}
 
 #pragma mark - Actions
 
 - (IBAction)backAtion:(id)sender {
  
-    UIButton *yesButton = [[UIButton alloc]init];
-    UIButton *noButton = [[UIButton alloc]init];
-    [TSAlerts createdAlertGameOver:self.view button:yesButton button:noButton];
-//    [self dismissViewControllerAnimated:YES completion:nil];
+    if (userInteractionAlert == NO) {
+        _alertView = [TSAlerts createdAlertGameOver:self.view];
+        UIButton *buttonYes = [self buttonSelected:buttonImgYes x:40 y:50];
+        UIButton *buttonNo = [self buttonSelected:buttonImgNo x:110 y:50];
+        [buttonYes addTarget:self action:@selector(hangleButtonYes) forControlEvents:UIControlEventTouchUpInside];
+        [buttonNo addTarget:self action:@selector(hangleButtonNo) forControlEvents:UIControlEventTouchUpInside];
+        [_alertView addSubview:buttonYes];
+        [_alertView addSubview:buttonNo];
+        userInteractionAlert = YES;
+    }
+}
+
+#pragma mark - Button Alert Game Over
+
+- (UIButton *)buttonSelected:(NSString *)question  x:(CGFloat)x y:(CGFloat)y
+{
+    _button = [[UIButton alloc] initWithFrame:CGRectMake(x, y, 50, 50)];
+    UIImage *image = [UIImage imageNamed:question];
+    [_button setImage:image forState:UIControlStateNormal];
+    return _button;
+}
+
+- (void)hangleButtonYes
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    userInteractionAlert = NO;
+}
+
+- (void)hangleButtonNo
+{
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                         _alertView.frame = CGRectMake(184, 520, 200, 120);
+                         _alertView.alpha = 0;
+                     }];
+        userInteractionAlert = NO;
 }
 
 - (void)userInteractionEnabled
@@ -170,10 +205,12 @@ static BOOL positon = NO;
 - (void)dealloc {
     [_collectionShip release];
     [_collectionEnemyShip release];
-    [_currentView release];
+//    [_currentView release];
     [_servise release];
     [_responseShots release];
-    [_hitView release];
+//    [_hitView release];
+    [_alertView release];
+    [_button release];
     [super dealloc];
 }
 
